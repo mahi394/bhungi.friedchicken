@@ -636,7 +636,7 @@ footer p {
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -947,10 +947,8 @@ section {
 
 /* Item Image Styling */
 .item img {
-    width: 100%;
     height: auto;
     max-width: 220px;
-    border-radius: 8px;
     margin-bottom: 15px;
     display: block;
 }
@@ -1047,7 +1045,7 @@ header {
 
     /* Adjust for burger, fries, cold drinks, and deals sections */
     section {
-        padding: 15px 0; /* Add some vertical spacing for sections */
+        padding: 0 15px; /* Add some vertical spacing for sections */
         width: 100%;
         margin: 0 auto;
     }
@@ -1057,6 +1055,7 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
+        width: 100%;
     }
 
     .item {
@@ -1162,6 +1161,9 @@ section {
     display: block; /* Remove any space beneath the image */
     margin: 0 auto; /* Center the image */
 }
+
+
+
 
 
 
