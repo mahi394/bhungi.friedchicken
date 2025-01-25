@@ -952,6 +952,7 @@ section {
     max-width: 220px;
     border-radius: 8px;
     margin-bottom: 15px;
+    display: block;
 }
 
 /* Ensuring All Sections are Centered */
@@ -1046,7 +1047,9 @@ header {
 
     /* Adjust for burger, fries, cold drinks, and deals sections */
     section {
-        padding: 10px 0; /* Add some vertical spacing for sections */
+        padding: 15px 0; /* Add some vertical spacing for sections */
+        width: 100%;
+        margin: 0 auto;
     }
 
     .items {
