@@ -973,12 +973,13 @@ html {
 
 
 
-/* Base styles for the header and buttons */
+/* General positioning for header elements */
 header {
     position: relative; /* Needed for absolute positioning of buttons */
     padding: 10px;
 }
 
+/* Contact Us and File a Complaint buttons */
 .contact, .complaint {
     position: absolute;
     top: 10px; /* Distance from the top of the screen */
@@ -991,41 +992,21 @@ header {
     text-decoration: none;
 }
 
+/* Hover effect for buttons */
 .contact:hover, .complaint:hover {
     background-color: rgba(0, 0, 0, 0.85); /* Darken on hover */
 }
 
-/* Mobile styles for buttons */
-@media (max-width: 480px) {
-    .contact, .complaint {
-        font-size: 12px; /* Smaller text size for mobile */
-        padding: 5px 10px; /* Adjust padding for better fit */
-        top: 5px; /* Reduce distance from the top if needed */
-        right: 5px; /* Reduce distance from the right edge */
-    }
-}
-
-/* For the rest of the layout (adjustments for mobile screens) */
+/* Mobile-specific adjustments */
 @media (max-width: 768px) {
-    .nav ul {
-        flex-direction: column; /* Stack nav items on smaller screens */
-        text-align: center;
-    }
-
-    .nav ul li {
-        margin: 10px 0;
-    }
-
-    .items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .item {
-        width: 100%; /* Stack items on top of each other */
-        margin: 15px 0;
+    /* For small screen size: */
+    .contact, .complaint {
+        font-size: 12px; /* Adjust font size for mobile */
+        padding: 5px 10px; /* Reduce padding */
+        top: 5px; /* Adjust top position */
+        right: 5px; /* Adjust right position */
     }
 }
+
 
 
