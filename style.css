@@ -973,56 +973,36 @@ html {
 
 
 
-/* Responsive Styles */
-
-/* For tablets and smaller screens */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .item {
-        width: 45%; /* Two items per row */
-        margin: 15px;
-    }
-
-    .order-btn {
-        font-size: 1.2em;
-        padding: 15px;
-    }
-}
-
-/* For small mobile screens */
+/* Add for small screens like mobile */
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8em;
+    /* Position the Contact Us and File a Complaint buttons in the top-right corner */
+    .contact, .complaint {
+        position: absolute;
+        top: 10px; /* Adjust the space from the top */
+        right: 10px; /* Adjust the space from the right */
+        font-size: 14px; /* Adjust the font size to fit */
+        background-color: rgba(0, 0, 0, 0.7); /* Add a slight background for better visibility */
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
     }
 
-    header p {
-        font-size: 1em;
+    /* Adjust the header for mobile screens */
+    header {
+        position: relative;
     }
 
-    nav ul {
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .nav ul {
         flex-direction: column;
         text-align: center;
+        padding: 0;
     }
 
-    nav ul li {
+    .nav ul li {
         margin: 10px 0;
     }
 
@@ -1033,12 +1013,8 @@ html {
     }
 
     .item {
-        width: 100%; /* One item per row */
+        width: 100%; /* Stack items on top of each other */
         margin: 15px 0;
     }
-
-    .order-btn {
-        font-size: 1.2em;
-        padding: 15px;
-    }
 }
+
