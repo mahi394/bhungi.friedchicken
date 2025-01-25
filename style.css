@@ -948,9 +948,10 @@ section {
 /* Item Image Styling */
 .item img {
     height: auto;
-    max-width: 220px;
+    max-width: 300px;
     margin-bottom: 15px;
     display: block;
+    object-fit: cover;
 }
 
 /* Ensuring All Sections are Centered */
