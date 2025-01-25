@@ -1082,6 +1082,7 @@ body {
 }
 
 header {
+
     padding: 20px;
 }
 
@@ -1144,6 +1145,20 @@ nav a:hover {
 
 
 
+/* Center the banners and sections */
+section {
+    width: 100%; /* Ensure full width */
+    margin: 0 auto; /* Center the sections */
+    padding: 0 15px; /* Optional: Add some padding for mobile */
+}
+
+/* Center the banner images */
+.banner img {
+    width: 100%; /* Make sure the image fills the container */
+    height: auto; /* Keep the aspect ratio */
+    display: block; /* Remove any space beneath the image */
+    margin: 0 auto; /* Center the image */
+}
 
 
 
