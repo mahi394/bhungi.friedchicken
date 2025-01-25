@@ -1057,8 +1057,8 @@ header {
     }
 
     .item {
-        flex: 1 1 45%; /* Allow items to take more space */
-        max-width: 45%;
+        flex: 1 1 60%; /* Allow items to take more space */
+        max-width: 60%;
         margin: 10px 0;
         text-align: center; /* Center text */
     }
@@ -1149,7 +1149,7 @@ nav a:hover {
 section {
     width: 100%; /* Ensure full width */
     margin: 0 auto; /* Center the sections */
-    padding: 0 15px; /* Optional: Add some padding for mobile */
+    padding: 20 15px; /* Optional: Add some padding for mobile */
 }
 
 /* Center the banner images */
