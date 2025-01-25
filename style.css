@@ -972,40 +972,37 @@ html {
 
 
 
-/* General Header Layout */
+/* Header Section */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px; /* Increased padding for more space */
+    padding: 10px 15px; /* Reduced padding for more space */
     position: relative;
-    background-color: #fff; /* Make sure background is clear for readability */
+    background-color: transparent; /* Make background transparent */
+    width: 100%; /* Ensure it covers the whole width */
 }
 
 /* Logo and Navigation */
 .logo {
     display: flex;
     align-items: center;
-    margin-right: 20px; /* Adding margin for spacing */
+    margin-right: 20px;
+    background: transparent; /* Ensure no background */
+    padding: 0; /* No padding around the logo */
 }
 
-nav ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* Optional: Remove any extra margin on the logo */
+.logo img {
+    margin: 0; /* Ensure no extra margin on the logo image */
 }
 
-nav ul li {
-    margin-right: 15px; /* Space between navigation items */
-}
-
-/* Buttons in the header */
+/* Header Contact and Complaint Buttons */
 .contact, .complaint {
     font-size: 14px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 10px 15px; /* Increased padding for buttons */
+    padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
     margin-left: 10px;
@@ -1019,109 +1016,131 @@ nav ul li {
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
     /* Hide Contact and Complaint Buttons on Mobile */
-    .contact,
-    .complaint {
-        display: none; /* Hides the buttons on mobile */
+    .contact, .complaint {
+        display: none;
     }
 
-    /* Stack logo, contact, and complaint vertically */
+    /* Stack logo and navigation for mobile */
     header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 20px 15px; /* Extra padding for mobile devices */
+        padding: 15px; /* Add padding to avoid cramping */
     }
 
-    /* Make the navigation menu display below the buttons for mobile */
+    /* Center navigation and stack items */
     nav {
-        display: block;
-        margin-top: 60px; /* Space between header and nav */
+        width: 100%; /* Make sure the nav stretches to the full width */
+        margin-top: 20px;
     }
 
-    /* Add spacing between navigation items */
+    /* Adjust nav links */
     nav ul {
-        padding: 10px 0;
+        justify-content: center;
         text-align: center;
+        width: 100%;
     }
 
     nav ul li {
-        margin-bottom: 10px; /* Adds space between nav links */
+        margin-bottom: 10px;
+    }
+
+    /* Adjust for burger, fries, cold drinks, and deals sections */
+    section {
+        padding: 10px 0; /* Add some vertical spacing for sections */
+    }
+
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .item {
+        flex: 1 1 45%; /* Allow items to take more space */
+        max-width: 45%;
+        margin: 10px 0;
+        text-align: center; /* Center text */
     }
 }
 
-/* Burgers Section */
-section#burgers {
-    padding: 20px;
-    margin: 20px 0; /* Margin between sections */
-}
 
-.items {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap; /* Wrap items on small screens */
-}
 
-/* Item */
-.item {
-    flex: 1;
-    max-width: 30%;
-    margin-bottom: 15px; /* Space between items */
-}
 
-/* Fries Section */
-section#fries {
-    padding: 20px;
-    margin: 20px 0;
-}
 
-.items {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
 
-/* Cold Drinks Section */
-section#cold-drinks {
-    padding: 20px;
-    margin: 20px 0;
-}
 
-.items {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
 
-/* Deals Section */
-section#deals {
-    padding: 20px;
-    margin: 20px 0;
-}
+/* Existing styles */
 
-.items {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+/* Example of your other CSS rules */
 
-/* Footer Section */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #222;
-    color: white;
-}
-
-/* Add some general spacing around the page */
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
 }
+
+header {
+    padding: 20px;
+}
+
+
+/* Adding the new styles for horizontal scrolling */
+nav {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of nav items */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+nav ul {
+    display: inline-flex; /* Align items in a horizontal row */
+    gap: 15px; /* Space between each navigation item */
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Remove bullet points */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Set your text color */
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+    nav {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping of nav items */
+    }
+    
+    nav ul {
+        display: flex; /* Align items horizontally in flex */
+        gap: 15px; /* Space between items */
+        margin: 0;
+    }
+
+    nav ul li {
+        flex-shrink: 0; /* Prevent items from shrinking */
+    }
+
+    nav a {
+        padding: 12px 18px; /* Increase padding for mobile */
+    }
+}
+
 
 
 
