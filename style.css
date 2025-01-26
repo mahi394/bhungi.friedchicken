@@ -1014,26 +1014,26 @@ header {
 }
 
 /* Mobile-specific adjustments */
+/* Mobile-specific adjustments */
 @media (max-width: 768px) {
-    /* Hide Contact and Complaint Buttons on Mobile */
+    /* 1. Hide Contact and Complaint Buttons on Mobile */
     .contact, .complaint {
         display: none;
     }
 
-    /* Stack logo and navigation for mobile */
+    /* 2. Stack the logo and navigation */
     header {
         flex-direction: column;
         align-items: flex-start;
         padding: 15px; /* Add padding to avoid cramping */
     }
 
-    /* Center navigation and stack items */
+    /* 3. Adjust navigation to center and take full width */
     nav {
-        width: 100%; /* Make sure the nav stretches to the full width */
+        width: 100%; /* Ensure nav takes full width */
         margin-top: 20px;
     }
 
-    /* Adjust nav links */
     nav ul {
         justify-content: center;
         text-align: center;
@@ -1044,9 +1044,9 @@ header {
         margin-bottom: 10px;
     }
 
-    /* Adjust for burger, fries, cold drinks, and deals sections */
+    /* 4. Adjust section padding and layout */
     section {
-        padding: 0 15px; /* Add some vertical spacing for sections */
+        padding: 0 15px; /* Adjust padding */
         width: 100%;
         margin: 0 auto;
     }
@@ -1059,13 +1059,15 @@ header {
         width: 100%;
     }
 
+    /* 5. Adjust Item cards to be more mobile-friendly */
     .item {
-        flex: 1 1 45%; /* Allow items to take more space */
+        flex: 1 1 45%; /* Items take up more space */
         max-width: 45%;
         margin: 10px 0;
         text-align: center; /* Center text */
     }
 }
+
 
 
 
