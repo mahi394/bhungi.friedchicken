@@ -634,10 +634,16 @@ footer p {
 /* Body and Background Image */
 
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    height: 100%; /* Ensures the body takes the full height of the screen */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    width: 100%; /* Ensure the page spans the entire width */
 }
+
 
 body {
     font-family: 'Arial', sans-serif;
@@ -775,7 +781,6 @@ nav ul li a:hover {
     border: 2px solid #ec1e26;
 }
 
-/* Sections */
 section {
     padding: 40px 20px;
     margin: 40px auto;
@@ -872,6 +877,8 @@ footer p {
 
 /* Media Queries */
 @media (max-width: 768px) {
+
+    
     .item {
         width: 48%;
         margin-right: 4%;
@@ -1165,7 +1172,9 @@ section {
     margin: 0 auto; /* Center the image */
 }
 
-
+[data-noindex="true"] {
+    display: none; /* Hide from users and Google */
+}
 
 
 
